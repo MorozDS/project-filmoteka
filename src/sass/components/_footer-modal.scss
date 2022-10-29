@@ -1,0 +1,167 @@
+.footer__modal-backdrop {
+  position: fixed;
+  z-index: 1;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 44, 44, 0.692);
+  opacity: 1;
+}
+
+.footer__modal-backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.footer__modal {
+  position: relative;
+  display: block;
+  top: 5%;
+  width: 290px;
+  margin: 0 auto;
+  border-radius: 2px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: #ffffff;
+
+  @media screen and (min-width: $tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 750px;
+  }
+}
+
+.darkmode--activated .footer__modal {
+  background-color: #2b2a29;
+  color: $hover-orange;
+}
+
+.footer__modal-backdrop.is-hidden .footer__modal {
+  transform: translate(-100% -100%);
+}
+
+.footer__modal-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: $text-color-gray;
+}
+
+.darkmode--activated .footer__modal-title {
+  color: $background-white;
+}
+
+.footer__modal-students {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.student-card:nth-child(1) .student-card__image {
+  object-position: top -10px;
+}
+
+.student-card:nth-child(2) .student-card__image {
+  object-position: top;
+}
+
+.student-card__student-name {
+  display: block;
+  color: $text-color-gray;
+  font-size: 17px;
+  padding: 5px;
+  transition: $color-transition;
+
+  &:hover,
+  &:focus {
+    color: $hover-orange;
+  }
+}
+
+.darkmode--activated .student-card__student-name {
+  isolation: isolate;
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: $hover-orange;
+  }
+}
+
+.student-card {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 15px;
+
+  @media screen and(min-width: $tablet) {
+    width: calc((100% - 4 * 15px) / 4);
+  }
+
+  @media screen and(min-width: $desktop) {
+    width: calc((100% - 4 * 15px) / 4);
+  }
+}
+
+.darkmode--activated .student-card {
+  color: $hover-orange;
+}
+
+.student-card__image {
+  border-radius: 4px;
+
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  @media screen and(min-width: $tablet) {
+    height: 150px;
+  }
+}
+
+.footer__closeBtn {
+  position: absolute;
+  background-color: $hover-orange;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.footer__close-icon {
+  width: 11px;
+  height: 11px;
+  transition: $fill-transition;
+
+  &:hover,
+  :focus {
+    fill: $hover-orange;
+  }
+}
+
+.darkmode--activated .footer__close-icon {
+  fill: $hover-orange;
+
+  &:hover,
+  :focus {
+    fill: $background-white;
+  }
+}

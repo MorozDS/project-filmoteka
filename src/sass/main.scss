@@ -1,0 +1,30 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+// Стили для файла с примером HTML-фрагмента
+
+@import './base/modernnormalize';
+@import './utils/visually-hidden';
+@import './base/reset';
+@import './utils/variables';
+@import './utils/mixins';
+@import './base/container';
+@import './base/body';
+@import './components/header.scss';
+@import './components/gallery';
+@import './components/trending';
+@import './components/movie-details';
+@import './components/footer';
+@import './components/footer-modal';
+@import './components/my-library-btn';
+@import './components/loader.scss';
+@import './components/button-up';
+@import './components/nothing-here';
+@import './components/btn-change-theme';
+@import './components/pagination';
+@import './components/filter-btn';
+@import './components/film-modal';
+// @import './components/trending-btn';
+@import './components/overlay-on-card';

@@ -1,0 +1,345 @@
+// --------------------MOBILE----------------------------
+
+.header {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../images/header320.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $text-color-black;
+  background-position: top;
+  width: 100%;
+  height: 230px;
+  padding-bottom: 85px;
+  padding-top: 46px;
+  margin: 0 auto;
+  isolation: isolate;
+
+  transition: 1000ms $transition-default-timing;
+
+  &__my-library {
+    background-repeat: no-repeat;
+    background-color: $text-color-black;
+    background-position: bottom;
+    width: 100%;
+    height: 230px;
+    padding-bottom: 65px;
+    padding-top: 46px;
+    margin: 0 auto;
+    isolation: isolate;
+    transition: 1000ms $transition-default-timing;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/inernal-header320.jpg);
+      background-size: cover;
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: $mobile),
+  (min-resolution: 192dpi) and (min-width: $mobile),
+  (min-resolution: 2dppx) and (min-width: $mobile) {
+  .header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header320@2x.jpg);
+      background-size: cover;
+
+    &__my-library {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/inernal-header320@2x.jpg);
+        background-size: cover;
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 3) and (min-width: $mobile),
+  (min-resolution: 288dpi) and (min-width: $mobile),
+  (min-resolution: 3dppx) and (min-width: $mobile) {
+  .header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header320@3x.jpg);
+      background-size: cover;
+
+    &__my-library {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/inernal-header320@3x.jpg);
+        background-size: cover;
+    }
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 41px;
+  align-items: center;
+}
+
+.logo__link {
+  display: flex;
+  align-items: center;
+}
+
+.logo__link:hover > .logo__icon {
+  stroke: $hover-orange;
+}
+
+.logo__icon {
+  & {
+    @media screen and (min-width: $tablet) {
+      margin-right: 10px;
+    }
+  }
+  stroke: $logo-color;
+  fill: none;
+  transition: $stroke-transition;
+}
+
+.logo__text {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.navigation__list {
+  display: flex;
+  padding-left: 0;
+  align-items: center;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.navigation__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color-white;
+  padding: 0%;
+  &:hover {
+    color: $hover-orange;
+    transition: $color-transition;
+  }
+}
+
+.header__form {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header__input {
+  width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: inherit;
+  border-bottom: 0.5px solid $text-color-white;
+  transition: $color-transition;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  color: $text-color-white;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid $hover-orange;
+    transition: border-bottom 500ms;
+  }
+}
+
+.header__input:focus-visible {
+  outline: none;
+}
+
+.header__input::placeholder {
+  font-size: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  padding-left: 1px;
+
+  color: #fff;
+}
+
+.btn__search {
+  position: absolute;
+  right: -3px;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.navigation__link.current {
+  position: relative;
+}
+
+.navigation__link.current::after {
+  position: absolute;
+  top: 13px;
+  display: block;
+  content: '';
+  height: 3px;
+  width: 100%;
+  background-color: $hover-orange;
+}
+
+// ------------------------TABLET------------------------
+
+@media screen and (min-width: $tablet) {
+  .header {
+    padding-top: 41px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header768.jpg);
+      background-size: cover;
+
+    &__my-library {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/inernal-header768.jpg);
+        background-size: cover;
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: $tablet),
+  (min-resolution: 192dpi) and (min-width: $tablet),
+  (min-resolution: 2dppx) and (min-width: $tablet) {
+  .header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header768@2x.jpg);
+      background-size: cover;
+
+    &__my-library {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/inernal-header768@2x.jpg);
+        background-size: cover;
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 3) and (min-width: $tablet),
+  (min-resolution: 288dpi) and (min-width: $tablet),
+  (min-resolution: 3dppx) and (min-width: $tablet) {
+  .header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header768@3x.jpg);
+      background-size: cover;
+
+    &__my-library {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/inernal-header768@3x.jpg);
+        background-size: cover;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .logo__text {
+    // display: block;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.16;
+    padding-top: 2px;
+    color: $text-color-white;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .header__form {
+    width: 336px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .navigation__list {
+    padding-left: 0;
+    align-items: center;
+  }
+}
+
+// ----------------------DESKTOP------------------------
+
+@media screen and (min-width: $desktop) {
+  .header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header1024.jpg);
+    max-width: 100%;
+    margin: auto;
+    background-size: cover;
+
+    &__my-library {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/inernal-header1024.jpg);
+      max-width: 100%;
+      margin: auto;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 2) and (min-width: $desktop),
+  (min-resolution: 192dpi) and (min-width: $desktop),
+  (min-resolution: 2dppx) and (min-width: $desktop) {
+  .header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header1024@2x.jpg);
+    max-width: 100%;
+    margin: auto;
+    background-size: cover;
+
+    &__my-library {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/inernal-header1024@2x.jpg);
+      max-width: 100%;
+      margin: auto;
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-device-pixel-ratio: 3) and (min-width: $desktop),
+  (min-resolution: 288dpi) and (min-width: $desktop),
+  (min-resolution: 3dppx) and (min-width: $desktop) {
+  .header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../images/header1024@3x.jpg);
+    max-width: 100%;
+    margin: auto;
+    background-size: cover;
+
+    &__my-library {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+        url(../images/inernal-header1024@3x.jpg);
+      max-width: 100%;
+      margin: auto;
+      background-size: cover;
+    }
+  }
+}
+
+.header_error {
+  color: $text-color-red;
+  margin-top: 22px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+
+  & {
+    @media screen and (min-width: $tablet) {
+      text-align: center;
+    }
+  }
+}
+
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.out-visible {
+  visibility: visible;
+  opacity: 0;
+}
+

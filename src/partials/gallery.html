@@ -1,0 +1,33 @@
+<section class="main-section">
+  <div class="container main__wrapper">
+    <h1 class="visually-hidden">Discover the latest and most popular movies with Filmoteka</h1>
+    <div class="filter__buttons_wrapper">
+      <ul class="filter__list">
+        <li class="filter__item">
+          <button class="filter__btn filter__btn--active" type="button" data-action="day">
+            Today
+          </button>
+        </li>
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-action="week">This week</button>
+        </li>
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-action="topRated">Top Rated</button>
+        </li>
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-action="upcoming">Upcoming</button>
+        </li>
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-action="nowPlaying">Now Playing</button>
+        </li>
+      </ul>
+    </div>
+    <ul class="gallery movie__list" data-action="galleryList"></ul>
+    <div id="pagination2" class="tui-pagination"></div>
+  </div>
+  <button type="button" class="btn-up">
+    <svg class="icon-up" width="12" height="12">
+      <use href="./images/icons.svg#icon-arrow-up"></use>
+    </svg>
+  </button>
+</section>

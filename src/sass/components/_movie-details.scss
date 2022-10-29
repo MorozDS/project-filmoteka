@@ -1,0 +1,195 @@
+.film__card {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 68px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 16px;
+  }
+}
+
+.film__poster {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 264px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 375px;
+  }
+}
+
+.film__caption {
+  font-size: 12px;
+  color: $text-color-black;
+}
+
+.film__title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: inherit;
+  line-height: 1.15;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    line-height: 1.17;
+  }
+}
+
+.film__list {
+  margin-bottom: 20px;
+}
+
+.film__item {
+  display: grid;
+  grid-template-columns: 108px auto;
+
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: 152px auto;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.film__item-caption {
+  line-height: 1.33;
+  color: $text-color-light-gray;
+}
+
+.film__rating {
+  line-height: 1.33;
+  color: $text-color-light-gray;
+}
+
+.film__vote,
+.film__votes,
+.film__popularity {
+  line-height: 1.17;
+}
+
+.film__vote {
+  padding: 1px 9px 1px 10px;
+  border-radius: 5px;
+  color: $text-color-white;
+  background-color: $hover-orange;
+}
+
+.film__votes {
+  padding: 1px 4px;
+  border-radius: 5px;
+  color: $text-color-black;
+  background-color: $background-gray;
+}
+
+.film__original-title,
+.film__genre,
+.film__about-caption {
+  line-height: 1.33;
+}
+
+.film__original-title {
+  text-transform: uppercase;
+}
+
+.film__about-caption {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.film__about {
+  margin-bottom: 20px;
+  line-height: 1.67;
+}
+
+.film__buttons {
+  display: flex;
+  gap: 20px;
+
+  @media screen and (min-width: $tablet) {
+    gap: 15px;
+  }
+}
+
+.film__button {
+  min-width: 110px;
+  min-height: 44px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1.33;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $text-color-black;
+  border-radius: 5px;
+  transition: $color-transition, $border-color-transition;
+
+  @media screen and (min-width: $tablet) {
+    min-width: 125px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 136px;
+  }
+
+  .darkmode--activated & {
+    color: $text-color-white;
+    border-color: $text-color-white;
+  }
+
+  &:hover:not(.film__button-active) {
+    color: $hover-orange;
+    border-color: $hover-orange;
+  }
+}
+
+.film__button-active {
+  color: $text-color-white;
+  background-color: $hover-orange;
+  border-color: $hover-orange;
+  transition: $border-color-transition, $bgc-transition;
+
+  .darkmode--activated & {
+    border-color: $hover-orange;
+  }
+
+  &:hover {
+    background-color: $hover-orange-dark;
+    border-color: $hover-orange-dark;
+  }
+}
+
+.film__watched {
+  padding: 6px 27px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 14px 9px 12px 9px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 14px 10px 12px 10px;
+  }
+}
+
+.film__queue {
+  padding: 13px 14px 13px 13px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 15px 21px 13px 21px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 14px 8px 12px 8px;
+  }
+}
